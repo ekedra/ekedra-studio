@@ -31,6 +31,46 @@ nav { padding:30px 0; border-bottom:1px solid #E5E5E5; }
 .nav-links a:hover { opacity:0.6; }
 
 /* =============================
+   SEARCH BAR
+============================= */
+.search-section {
+    padding:30px 0;
+    background-color:#FAFAF8;
+    text-align:center;
+}
+#site-search {
+    width:80%;
+    max-width:500px;
+    padding:12px 18px;
+    border-radius:6px;
+    border:1px solid #E5E5E5;
+    font-family:'Inter', sans-serif;
+    font-size:0.95rem;
+    outline:none;
+    transition:border 0.3s ease;
+}
+#site-search:focus {
+    border-color:#1E1E1E;
+}
+#search-results {
+    list-style:none;
+    margin-top:15px;
+    padding:0;
+}
+#search-results li {
+    padding:10px 15px;
+    border-bottom:1px solid #E5E5E5;
+    text-align:left;
+    font-size:0.9rem;
+}
+#search-results li a {
+    margin-left:10px;
+    font-weight:500;
+    border-bottom:1px solid #1E1E1E;
+}
+#search-results li a:hover { opacity:0.6; }
+
+/* =============================
    HERO CENTERED
 ============================= */
 .hero-centered { padding:180px 0 160px 0; text-align:center; }

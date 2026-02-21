@@ -1,4 +1,22 @@
 <script>
+const toggle = document.getElementById('darkModeToggle');
+
+// Load saved mode
+if(localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+}
+
+toggle.addEventListener("change", function() {
+    if(this.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+    } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("theme", "light");
+    }
+});
+
 const searchData = [
     { type: "Book", title: "Erethria", category: "Fantasy Novel", link: "#" },
     { type: "Essay", title: "The Architecture of Law", category: "Civic Thought", link: "#" },

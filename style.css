@@ -228,3 +228,43 @@ body::before {
 #darkModeToggle:checked + .toggle-label::after {
     transform: translateX(20px);
 }
+
+/* =============================
+   ADVERTISEMENT SECTION
+============================= */
+
+.ad-section {
+    padding: 80px 0;
+    background-color: var(--secondary-bg, #FAFAF8);
+}
+
+.ad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.ad-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color, #E5E5E5);
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.ad-placeholder {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}

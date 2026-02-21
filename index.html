@@ -250,4 +250,256 @@
 </footer>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKEDRA Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="container nav-wrapper">
+        <div class="logo">EKEDRA</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Books</a>
+            <a href="#">Products</a>
+            <a href="#">Services</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+            <div class="theme-toggle">
+    <input type="checkbox" id="darkModeToggle">
+    <label for="darkModeToggle" class="toggle-label"></label>
+        </div>
+    </div>
+</nav>
+
+<!-- SEARCH BAR -->
+<section class="search-section">
+    <div class="container">
+        <input type="text" id="site-search" placeholder="Search books, essays, services..." onkeyup="performSearch()">
+        <ul id="search-results"></ul>
+    </div>
+</section>
+
+<!-- HERO SECTION -->
+<section class="hero-centered">
+    <div class="container hero-content">
+        <h1>EKEDRA</h1>
+        <p class="hero-subtitle">
+            Fiction, Architecture, and Civic Thought — crafted with precision and purpose.
+        </p>
+        <div class="hero-buttons">
+            <a href="#" class="btn">Explore Works</a>
+            <a href="#" class="btn btn-secondary">View Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+    <div class="container">
+        <blockquote>
+            “Creation is discipline. Thought is architecture. Words are structures.”
+        </blockquote>
+        <p class="quote-author">— EKEDRA</p>
+    </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="featured-work">
+    <div class="container featured-grid">
+        <div class="featured-image">
+            <img src="assets/erethria-cover.jpg" alt="Erethria Book Cover">
+        </div>
+        <div class="featured-content">
+            <p class="featured-category">Fantasy Novel</p>
+            <h2>Erethria</h2>
+            <p>
+                A realm shaped by fractured alliances and ancient law, Erethria explores power, consequence, and the fragile architecture of civilization.
+            </p>
+            <div class="featured-buttons">
+                <a href="#" class="btn">Read More</a>
+                <a href="#" class="btn btn-secondary">Buy</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ESSAYS / ARTICLES -->
+<section class="essays-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Essays & Articles</h2>
+            <p class="section-subtitle">Reflections on law, architecture, culture, and civic structure.</p>
+        </div>
+        <div class="essays-grid">
+            <article class="essay-card">
+                <p class="essay-category">Civic Thought</p>
+                <h3>The Architecture of Law</h3>
+                <p>How structural thinking shapes legal systems and the societies they govern.</p>
+                <a href="#">Read Article</a>
+            </article>
+            <article class="essay-card">
+                <p class="essay-category">Architecture</p>
+                <h3>Space as Discipline</h3>
+                <p>Design is not decoration — it is restraint, clarity, and deliberate order.</p>
+                <a href="#">Read Article</a>
+            </article>
+            <article class="essay-card">
+                <p class="essay-category">Cultural Analysis</p>
+                <h3>Fiction as Governance</h3>
+                <p>Stories do not escape reality. They model it.</p>
+                <a href="#">Read Article</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Products</h2>
+            <p class="section-subtitle">Limited prints and studio editions.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="assets/product-shirt.jpg" alt="Minimal Studio T-Shirt">
+                <h3>EKEDRA Studio T-Shirt</h3>
+                <p>Comfortable wearable edition, designed for thinkers and creators.</p>
+                <a href="#" class="btn">View</a>
+            </div>
+            <div class="product-card">
+                <img src="assets/product-poster.jpg" alt="Architecture-Inspired Poster">
+                <h3>Architecture Manifest Poster</h3>
+                <p>Minimalist studio print for walls, inspired by space and order.</p>
+                <a href="#" class="btn">View</a>
+            </div>
+            <div class="product-card">
+                <img src="assets/product-journal.jpg" alt="Studio Journal">
+                <h3>EKEDRA Studio Journal</h3>
+                <p>Hardcover journal with clean layout, ideal for planning, sketching, and writing.</p>
+                <a href="#" class="btn">View</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Services</h2>
+            <p class="section-subtitle">Architecture, design, and creative consulting tailored for builders, thinkers, and storytellers.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="assets/service-architecture.png" alt="Architecture & Fit-Out">
+                <h3>Architecture & Fit-Out</h3>
+                <p>Comprehensive building design, concept planning, and project execution for residential and commercial spaces.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="assets/service-3dmodel.png" alt="3D Modeling & Concept Design">
+                <h3>3D Modeling & Concept Design</h3>
+                <p>High-quality 3D visualizations, renderings, and spatial concepts to bring ideas to life.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="assets/service-creative.png" alt="Creative & Writing Consulting">
+                <h3>Creative & Writing Consulting</h3>
+                <p>Worldbuilding, narrative structuring, branding guidance, and literary consultation.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="assets/service-branding.png" alt="Branding Consultation">
+                <h3>Branding Consultation</h3>
+                <p>Refined branding strategy and visual identity for studios, authors, and creative enterprises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SUPPORT / PATRON -->
+<section class="support-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Support EKEDRA</h2>
+            <p class="section-subtitle">Help keep EKEDRA’s work alive. Choose the way that suits you best.</p>
+        </div>
+
+        <div class="support-grid">
+
+            <div class="support-card">
+                <h3>Donate</h3>
+                <p>Contribute via PayPal or GCash to directly support projects and publications.</p>
+                <a href="#" class="btn">Donate</a>
+            </div>
+
+            <div class="support-card">
+                <h3>Become a Patron</h3>
+                <p>Join a monthly subscription to receive exclusive insights, early releases, and behind-the-scenes updates.</p>
+                <a href="#" class="btn">Join</a>
+            </div>
+
+            <div class="support-card">
+                <h3>Buy Me a Coffee</h3>
+                <p>Show appreciation with a one-time token of support. Every little contribution fuels the studio.</p>
+                <a href="#" class="btn">Support</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Contact</h2>
+            <p class="section-subtitle">Reach out for inquiries, commissions, or collaborations.</p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <select name="subject">
+                    <option value="">Select Subject</option>
+                    <option value="books">Books</option>
+                    <option value="services">Services</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 EKEDRA Studio. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
 </html>

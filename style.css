@@ -174,3 +174,89 @@ body::before {
 .form-group input,
 .form-group select,
 .form-group textarea { width:100%; padding:14
+
+/* =============================
+   DARK MODE VARIABLES
+============================= */
+:root {
+    --bg-color: #FFFFFF;
+    --text-color: #1E1E1E;
+    --secondary-bg: #FAFAF8;
+    --border-color: #E5E5E5;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode Active */
+body.dark-mode {
+    --bg-color: #0E0E0E;
+    --text-color: #F5F5F5;
+    --secondary-bg: #1A1A1A;
+    --border-color: #333333;
+}
+
+/* Update sections to use variables */
+section {
+    background-color: var(--bg-color);
+}
+
+.search-section {
+    background-color: var(--secondary-bg);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* =============================
+   TOGGLE SWITCH (Minimal Sleek)
+============================= */
+
+.theme-toggle {
+    margin-left: 20px;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.toggle-label {
+    width: 46px;
+    height: 24px;
+    background: #E5E5E5;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.toggle-label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: #1E1E1E;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Active (Dark Mode) */
+#darkModeToggle:checked + .toggle-label {
+    background: #444;
+}
+
+#darkModeToggle:checked + .toggle-label::after {
+    transform: translateX(20px);
+    background: #F5F5F5;
+}

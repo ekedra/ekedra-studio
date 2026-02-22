@@ -1,64 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // DARK MODE
-    const toggle = document.getElementById("darkModeToggle");
+    const toggle = document.getElementById("theme-toggle");
 
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-        toggle.checked = true;
-    }
-
-    toggle.addEventListener("change", function () {
-        document.body.classList.toggle("dark-mode");
-        localStorage.setItem("theme",
-            document.body.classList.contains("dark-mode") ? "dark" : "light"
-        );
+    toggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
     });
 
+    // DROPDOWN
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const dropdown = document.querySelector(".dropdown");
+
+    dropdownBtn.addEventListener("click", function () {
+        dropdown.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+        }
+    });
 
     // SEARCH
-    const searchInput = document.getElementById("site-search");
-    const results = document.getElementById("search-results");
+    const searchInput = document.getElementById("searchInput");
 
     searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toLowerCase();
+        const items = document.querySelectorAll(".searchable");
 
-        const value = searchInput.value.toLowerCase();
-        results.innerHTML = "";
-
-        if (value.length < 2) return;
-
-        const searchable = document.querySelectorAll(".searchable, .essay h3");
-
-        searchable.forEach(item => {
-
-            const text = item.dataset?.title || item.textContent;
-
-            if (text.toLowerCase().includes(value)) {
-                const li = document.createElement("li");
-                li.textContent = text;
-                results.appendChild(li);
-            }
+        items.forEach(item => {
+            const text = item.getAttribute("data-title").toLowerCase();
+            item.style.display = text.includes(filter) ? "block" : "none";
         });
-
-    });
-
-
-    // AUTO IN-ARTICLE AD
-    const essays = document.querySelectorAll(".essay-content");
-
-    essays.forEach(content => {
-
-        const paragraphs = content.querySelectorAll("p");
-
-        if (paragraphs.length > 2) {
-
-            const ad = document.createElement("div");
-            ad.classList.add("in-article-ad");
-            ad.textContent = "Advertisement";
-
-            paragraphs[1].after(ad);
-        }
-
     });
 
 });

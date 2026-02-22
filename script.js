@@ -64,3 +64,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// ==========================
+// AUTO IN-ARTICLE ADS
+// ==========================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const essays = document.querySelectorAll(".essay-content");
+
+    essays.forEach(content => {
+
+        const paragraphs = content.querySelectorAll("p");
+
+        paragraphs.forEach((para, index) => {
+
+            // Insert ad after 2nd paragraph
+            if (index === 1) {
+
+                const ad = document.createElement("div");
+                ad.classList.add("in-article-ad");
+
+                ad.innerHTML = `
+                    <div class="ad-card">
+                        <div class="ad-placeholder">Advertisement</div>
+                    </div>
+                `;
+
+                para.after(ad);
+            }
+
+        });
+
+    });
+
+});

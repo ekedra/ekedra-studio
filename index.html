@@ -1,114 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EKEDRA</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>EKEDRA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-    <div class="container nav-wrapper">
-        <div class="logo">EKEDRA</div>
+<header class="navbar">
+    <div class="logo">EKEDRA</div>
 
-        <div class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#essays">Essays</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+
+            <li class="dropdown">
+                <button class="dropdown-btn">Books ▾</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#fantasy">Fantasy</a></li>
+                    <li><a href="#comics">Comics</a></li>
+                    <li><a href="#essays">Essays</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- Minimal Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"></button>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section hero">
+    <h1>EKEDRA</h1>
+    <p class="author-statement">
+        Architecture. Law. Worldbuilding. Narrative Systems.
+    </p>
+
+    <div class="featured-book">
+        <h2>Featured Work</h2>
+        <h3>Erethria</h3>
+        <p>Epic world shaped by power, law, and memory.</p>
+        <div class="btn-group">
+            <button class="btn">Read</button>
+            <button class="btn-outline">Explore</button>
         </div>
-
-        <div class="theme-toggle">
-            <input type="checkbox" id="darkModeToggle">
-            <label for="darkModeToggle" class="toggle-label"></label>
-        </div>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero" class="hero">
-    <div class="container">
-        <h1>Architecture. Thought. Creation.</h1>
-        <p>EKEDRA is a space for structured imagination and disciplined creativity.</p>
     </div>
 </section>
 
 <!-- SEARCH -->
-<section class="search-section">
-    <div class="container">
-        <input type="text" id="site-search" placeholder="Search essays or services...">
-        <ul id="search-results"></ul>
-    </div>
+<section class="section">
+    <input type="text" id="searchInput"
+           class="search-bar"
+           placeholder="Search books, essays, services, products...">
 </section>
 
-<!-- ESSAYS -->
-<section id="essays" class="section">
-    <div class="container">
-        <h2>Essays</h2>
+<!-- BOOKS -->
+<section id="books" class="section">
+    <h2>Books</h2>
 
-        <article class="essay">
-            <h3>The Architecture of Law</h3>
-            <div class="essay-content">
-                <p>Law is spatial before it is textual.</p>
-                <p>It organizes behavior like walls organize movement.</p>
-                <p>Authority is not loud; it is structured.</p>
-                <p>Discipline gives freedom its frame.</p>
-                <p>Order allows imagination to flourish.</p>
+    <div id="fantasy" class="category">
+        <h3>Fantasy</h3>
+        <div class="grid">
+            <div class="card searchable" data-title="Erethria fantasy epic series">
+                <div class="cover"></div>
+                <h4>Erethria</h4>
+                <p>Epic fantasy series.</p>
+                <button class="btn">Read</button>
             </div>
-        </article>
-
-        <article class="essay">
-            <h3>Space as Discipline</h3>
-            <div class="essay-content">
-                <p>Space defines intention.</p>
-                <p>Minimalism is structured clarity.</p>
-                <p>Architecture is frozen philosophy.</p>
-                <p>Form follows conviction.</p>
-            </div>
-        </article>
-
+        </div>
     </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-    <div class="container">
-        <h2>Services</h2>
+    <div id="comics" class="category">
+        <h3>Comics</h3>
+        <div class="grid">
+            <div class="card searchable" data-title="Graphic novel comic series">
+                <div class="cover"></div>
+                <h4>Untitled Graphic</h4>
+                <p>Visual narrative series.</p>
+                <button class="btn">Read</button>
+            </div>
+        </div>
+    </div>
 
-        <div class="card-grid">
-            <div class="card searchable" data-title="Architecture & Fit-Out">
-                Architecture & Fit-Out
-            </div>
-            <div class="card searchable" data-title="3D Modeling & Concept Design">
-                3D Modeling & Concept Design
-            </div>
-            <div class="card searchable" data-title="Creative Consulting">
-                Creative Consulting
+    <div id="essays" class="category">
+        <h3>Academic & Legislative Essays</h3>
+        <div class="grid">
+            <div class="card searchable" data-title="Legislative reform policy legal essay">
+                <h4>Legislative Reform Study</h4>
+                <p>Policy and legal framework analysis.</p>
+                <button class="btn">Read</button>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Contact</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button type="submit" class="btn">Send</button>
-        </form>
+<!-- PRODUCTS -->
+<section id="products" class="section">
+    <h2>Products</h2>
+
+    <div class="grid">
+        <div class="card searchable" data-title="Apparel tshirt clothing">
+            <h4>Apparel</h4>
+            <p>Minimalist EKEDRA designs.</p>
+        </div>
+
+        <div class="card searchable" data-title="Poster prints art">
+            <h4>Prints / Posters</h4>
+            <p>Architectural & world maps.</p>
+        </div>
+
+        <div class="card searchable" data-title="Limited edition signed">
+            <h4>Limited Editions</h4>
+            <p>Signed numbered releases.</p>
+        </div>
+
+        <div class="card searchable" data-title="Digital download ebook pdf">
+            <h4>Digital Downloads</h4>
+            <p>PDF & eBook format.</p>
+        </div>
     </div>
 </section>
 
-<footer>
-    <div class="container">
-        <p>© 2026 EKEDRA</p>
+<!-- SERVICES -->
+<section id="services" class="section corporate">
+    <h2>Services</h2>
+
+    <div class="grid">
+        <div class="card searchable"
+             data-title="Architecture fit out concept design 3d modeling documentation consultation">
+            <h4>Architecture & Fit-Out</h4>
+            <p>Concept design, 3D modeling, documentation.</p>
+        </div>
+
+        <div class="card searchable"
+             data-title="Worldbuilding writing commission branding consultation creative">
+            <h4>Creative Services</h4>
+            <p>Worldbuilding, writing commissions, branding consultation.</p>
+        </div>
     </div>
+</section>
+
+<!-- SUPPORT -->
+<section id="support" class="section">
+    <h2>Support</h2>
+    <div class="support-grid">
+        <button class="btn-outline">Donate</button>
+        <button class="btn-outline">Become a Patron</button>
+        <button class="btn-outline">Sponsor the Project</button>
+    </div>
+</section>
+
+<footer class="footer">
+    © 2026 EKEDRA
 </footer>
 
 <script src="script.js"></script>
